@@ -5,7 +5,7 @@ import logo from './logo.svg';
 // import {store} from "./store";
 import './App.css';
 
-const person = ["Jose Antonio","Jesus Antonio","Maria Jose","Mariela Gonzalez"];
+const people = ["Jose Antonio","Jesus Antonio","Maria Jose","Mariela Gonzalez"];
 
 class App extends Component {
 
@@ -18,7 +18,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
         
-          <ListContainer person={person}/>
+          <ListContainer people={people}/>
           <PersonContainer/>
         </header>
       </div>

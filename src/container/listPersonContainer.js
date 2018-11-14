@@ -11,43 +11,34 @@ class listPersonContainer extends Component{
         this.hanglePushPerson = this.hanglePushPerson.bind(this);
       }
       hanglePushPerson(person){
-        // this.setState({
-        //   person:this.props.person
-        // });
         console.log(`Persona seleccionada ${person}`);
         this.props.setPerson(person);
       }
-    //   componentDidMount(){
-    //     this.setState(prevState=>({
-    //       person:prevState.person
-    //     }))
-    //   }
+      componentDidMount(){
+        this.setState(prevState=>({
+          person:prevState.person
+        }))
+      }
     
 
     render(){
-       
+       console.log(this.props.people);
         return(
-        <Fragment>
-
-            <button
-
-onClick={this.hanglePushPerson}
->
-click
-</button>
             <ul>
-            {this.props.person.map((name ,index) =>{
-                return <li key={index} onClick={this.hanglePushPerson.bind(this , name)}>{name}</li>
-            })}
-        </ul>
-        </Fragment>
+                {this.props.people.map((name ,index) =>{
+                    return <li key={index}
+                               onClick={this.hanglePushPerson.bind(this , name)}>
+                        {name}</li>
+                })}
+            </ul>
         )
     }
 }
 listPersonContainer.propTypes  ={
     setPerson: PropTypes.func.isRequired,
-  }
+  };
+const mapStateToProps = ({person}) => ({person});
   const mapDispatchToProps  = (dispatch) => ({
-      setPerson: value => dispatch(setPerson(value))
+      setPerson: payload => dispatch(setPerson(payload))
   });
-export default  connect(null,mapDispatchToProps)(listPersonContainer);
+export default  connect(mapStateToProps,mapDispatchToProps)(listPersonContainer);

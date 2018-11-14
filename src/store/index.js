@@ -1,7 +1,8 @@
-import {createStore,compose} from 'redux';
-import {person} from '../reducer/person';
+import {createStore,applyMiddleware,compose} from 'redux';
+import thunk from 'redux-thunk';
+import reducers from '../reducer';
 const initinialState = {
-    person:'Andrea Castro'
+    person:'Jose Antonio'
 };
-
-export const store = createStore(person,initinialState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE || compose;
+export const store = createStore(reducers,initinialState,composeEnhancer(applyMiddleware(thunk)));

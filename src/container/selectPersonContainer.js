@@ -1,6 +1,6 @@
 import React,{Component,Fragment} from 'react';
-import {connect} from 'react-redux'
-import {setPerson} from "../actions";
+import {connect} from 'react-redux';
+// import {setPerson} from "../actions";
 import PropTypes from 'prop-types';
 import Person from '../components/Person';
 class selectPersonContainer extends Component {
@@ -11,12 +11,12 @@ class selectPersonContainer extends Component {
     render(){
         console.log(this.props.person);
         return(
-                    this.props.person && <Person className="person" name={this.props.name}/>
+            this.props.person && <Person className="person" name={this.props.person}/>
         )
     }
 }
 selectPersonContainer.propTypes  ={
     person: PropTypes.string.isRequired,
-  }
-const mapStateToProps  =  ({ person}) =>({ person  });
-export default   connect(mapStateToProps,null)(selectPersonContainer);;
+};
+const mapStateToProps = ({person}) => ({person});
+export default connect(mapStateToProps,null)(selectPersonContainer);
