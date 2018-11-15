@@ -9,14 +9,14 @@ class selectPersonContainer extends Component {
         console.log(this.props.person);
     }
     render(){
-        console.log(this.props.person);
+        console.log(`persona renderiada:    ${this.props.person}`);
         return(
             this.props.person && <Person className="person" name={this.props.person}/>
         )
     }
 }
 selectPersonContainer.propTypes  ={
-    person: PropTypes.string.isRequired,
+    person: PropTypes.string,
 };
 const mapStateToProps = ({person}) => ({person});
 export default connect(mapStateToProps,null)(selectPersonContainer);

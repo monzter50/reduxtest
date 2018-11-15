@@ -23,7 +23,7 @@
 }
 .person{
   display: grid;
-  height: 400px;
+  height: 100px;
   justify-items: center;
   align-content: center;
 }
