@@ -1,5 +1,6 @@
 import React,{Component,Fragment} from 'react';
 import {connect} from 'react-redux';
+import Card from '../components/Card';
 // import {setPerson} from "../actions";
 import PropTypes from 'prop-types';
 import Person from '../components/Person';
@@ -11,7 +12,14 @@ class selectPersonContainer extends Component {
     render(){
         console.log(`persona renderiada:    ${this.props.person}`);
         return(
-            this.props.person && <Person className="person" name={this.props.person}/>
+            <section className={"card-container"}>
+                <Card>
+                    {
+                         <Person className="person" name={this.props.person}/>
+                    }
+                </Card>
+
+            </section>
         )
     }
 }

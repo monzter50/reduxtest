@@ -1,0 +1,88 @@
+:root{
+  /* Buttons-Colors */
+  --btn-general:#a6c51f;
+  --btn-general-hover:#1297d1;
+  /*Principal colors*/
+  --neutral-color: #f6f6f6;
+  --first-color: #00BBA0 ;
+  --second-color: #7B7B7B;
+  --third-color: #4A4A4A;
+  --four-color: #FF3744;
+  --five-color: var(--btn-general);
+  --six-color:#FFD05C;
+  --seven-color:#4E4E4E;
+  --light-grey:#f7f7f7;
+  --grey:#ACACAC;
+  /*Text colors*/
+  --text-color: #7B7B7B;
+  --link-text-color: var(--five-color);
+  --second-text-color:#F9F9F9;
+  /*Hovers*/
+  --hover-primary:var(--first-color);
+  --hover-second: var(--second-color);
+  --iconos-register:#808080;
+  /*Colors default*/
+  --dark: #2e2e2e;
+  --white: #fff;
+  --danger: #f0506e;
+  --succes: #32d296;
+  /*Fonts default*/
+  --font-family: "Lato",sans-serif;
+  --line-height: 1.6;
+  --font-size: 16px;
+  --font-size-xs: 10px;
+  --font-size-sm: .8em;
+  --font-size-m: calc(var(--font-size) + 2);
+  --font-size-l: calc(var(--font-size-m) + 2);
+  --font-size-sm:1.2em;
+  --font-size-md: 2.2em;
+  --font-size-lg: 3.2em;
+  --font-style-light: 100;
+  --font-style-regular: normal;
+  --font-style-semibold: 400;
+  --font-style-bold: 700;
+  /*Properties*/
+  --z-back: -1;
+  --z-normal: 1;
+  --z-subnormal: 2;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  --padding-none: 0;
+  --margin-none: 0;
+  --padding: 1rem;
+  --margin: 1rem;
+  --padding-xs: calc(var(--padding) / 2);
+  --margin-xs: calc(var(--margin) / 2);
+  --padding-m: calc(var(--padding) * 2);
+  --margin-m: calc(var(--margin) * 2);
+  --padding-l: calc(var(--padding) * 3);
+  --margin-l: calc(var(--margin) * 3);
+  --padding-em: 1em;
+  --margin-em: 1em;
+  --padding-em-m: calc(var(--padding-em) * 2);
+  --margin-em-m: calc(var(--margin-em) * 2);
+  --padding-em-l: calc(var(--padding-em) * 3);
+  --margin-em-l: calc(var(--margin-em) * 3);
+  --border-radius: .15rem;
+  --border-radius-m: calc(var(--border-radius) + 1.1);
+  --border-radius-l: calc(var(--border-radius-m) + 1.1);
+  --all-transition: all .5s ease;
+  --hover-transition: all 150ms ease;
+  --input-transition: .2s ease-in-out;
+  --simple-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+
+// Media queries
+$phone: 576px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Typography
+$font-family: 'sans-serif';

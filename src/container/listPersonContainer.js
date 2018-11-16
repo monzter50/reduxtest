@@ -2,6 +2,7 @@ import React,{Component,Fragment} from 'react';
 import { bindActionCreators, compose } from 'redux';
 import {connect} from 'react-redux'
 import {getDataPeople,setSeletedPerson} from "../actions";
+import logo from '../logo.svg';
 
 import PropTypes from 'prop-types';
 class listPersonContainer extends Component{
@@ -20,7 +21,7 @@ class listPersonContainer extends Component{
       componentDidMount(){
         this.setState(prevState=>({
           person:prevState.person
-        }))
+        }));
         this.props.getPeople();
       }
     
@@ -30,14 +31,18 @@ class listPersonContainer extends Component{
         if(!this.props.people){
           return null
         }
+
+        console.log(this.props.people.people);
         return(
-            <ul>
-                {this.props.people.map((name ,index) =>{
-                    return <li key={index}
-                               onClick={this.hanglePushPerson.bind(this , name)}>
-                        {name}</li>
-                })}
-            </ul>
+            <header className="nav-left">
+                <img src={logo} className="App-logo" alt="logo" width={100}/>
+                <ul className={"nav"}>
+                    {/*{this.props.people.map((name ,index) =>{*/}
+                        {/*return <li className={"nav__items"} key={index}>*/}
+                            {/*<a className={"nav__link"} onClick={this.hanglePushPerson.bind(this , name)}>{name}</a></li>*/}
+                    {/*})}*/}
+                </ul>
+            </header>
         )
     }
 }
